@@ -15,6 +15,25 @@ namespace FundamentosNetCore
             this.textNombre.Width = 220;
             this.textNombre.TextAlign = HorizontalAlignment.Left;
             this.btnPulsar.BackColor = Color.Blue;
+
+            /**
+             * //NO ES CONVERSION AUTOMATICA
+             * int mayor = 88;
+             * short pequeño = mayor;
+            **/
+
+            /**
+             * //ES CONVERSION AUTOMATICA
+             * short pequeño = 88;
+             * int mayor = pequeño;
+            **/
+
+            /**
+             * //STRING A PRIMITIVO
+             * string textoNumero = "123456";
+             * int numero = int.Parse(textoNumero);
+             * double otro = double.Parse(textoNumero);
+            **/
         }
     }
 }
