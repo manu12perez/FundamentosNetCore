@@ -46,7 +46,7 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(265, 75);
+            label1.Location = new Point(470, 121);
             label1.Name = "label1";
             label1.Size = new Size(155, 20);
             label1.TabIndex = 1;
@@ -54,7 +54,7 @@
             // 
             // textNombre
             // 
-            textNombre.Location = new Point(265, 98);
+            textNombre.Location = new Point(470, 144);
             textNombre.Name = "textNombre";
             textNombre.Size = new Size(204, 27);
             textNombre.TabIndex = 2;
