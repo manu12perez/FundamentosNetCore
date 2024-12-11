@@ -20,20 +20,33 @@ namespace FundamentosNetCore
              * //NO ES CONVERSION AUTOMATICA
              * int mayor = 88;
              * short pequeño = mayor;
-            **/
+             */
 
             /**
              * //ES CONVERSION AUTOMATICA
              * short pequeño = 88;
              * int mayor = pequeño;
-            **/
+             */
 
             /**
              * //STRING A PRIMITIVO
              * string textoNumero = "123456";
              * int numero = int.Parse(textoNumero);
              * double otro = double.Parse(textoNumero);
-            **/
+             */
+
+            /** 
+             * //CASTIN PRIMITIVOS
+             *  int mayor = 88;
+             *  short pequeño = (short)mayor;
+             */
+
+            /**
+             * //CUALQUIER OBJETO A STRING
+             * int numero = 88;
+             * string texto = numero.ToString();
+             * texto = btnPulsar.ToString();
+             */
         }
     }
 }
