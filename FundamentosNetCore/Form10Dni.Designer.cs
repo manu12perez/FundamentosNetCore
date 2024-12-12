@@ -1,6 +1,6 @@
 ﻿namespace FundamentosNetCore
 {
-    partial class Form06ValidarMail
+    partial class Form10Dni
     {
         /// <summary>
         /// Required designer variable.
@@ -29,56 +29,57 @@
         private void InitializeComponent()
         {
             label1 = new Label();
-            txtEmail = new TextBox();
+            txtDni = new TextBox();
             btnValidar = new Button();
-            lblResultado = new Label();
+            label2 = new Label();
             SuspendLayout();
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(92, 43);
+            label1.Location = new Point(179, 59);
             label1.Name = "label1";
-            label1.Size = new Size(140, 20);
+            label1.Size = new Size(109, 20);
             label1.TabIndex = 0;
-            label1.Text = "Introduzca un Email";
+            label1.Text = "Introduzca DNI";
             // 
-            // txtEmail
+            // txtDni
             // 
-            txtEmail.Location = new Point(92, 66);
-            txtEmail.Name = "txtEmail";
-            txtEmail.Size = new Size(522, 27);
-            txtEmail.TabIndex = 1;
+            txtDni.Location = new Point(179, 82);
+            txtDni.Name = "txtDni";
+            txtDni.Size = new Size(419, 27);
+            txtDni.TabIndex = 1;
             // 
             // btnValidar
             // 
-            btnValidar.Location = new Point(92, 113);
+            btnValidar.Location = new Point(323, 126);
             btnValidar.Name = "btnValidar";
-            btnValidar.Size = new Size(522, 54);
+            btnValidar.Size = new Size(94, 29);
             btnValidar.TabIndex = 2;
-            btnValidar.Text = "Validar Email";
+            btnValidar.Text = "Validar DNI";
             btnValidar.UseVisualStyleBackColor = true;
+            btnValidar.Click += btnValidar_Click;
             // 
-            // lblResultado
+            // label2
             // 
-            lblResultado.AutoSize = true;
-            lblResultado.Location = new Point(92, 198);
-            lblResultado.Name = "lblResultado";
-            lblResultado.Size = new Size(92, 20);
-            lblResultado.TabIndex = 3;
-            lblResultado.Text = "lblResultado";
+            label2.AutoSize = true;
+            label2.Location = new Point(179, 176);
+            label2.Name = "label2";
+            label2.Size = new Size(50, 20);
+            label2.TabIndex = 3;
+            label2.Text = "label2";
             // 
-            // Form06ValidarMail
+            // Form10Dni
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(670, 249);
-            Controls.Add(lblResultado);
+            ClientSize = new Size(800, 450);
+            Controls.Add(label2);
             Controls.Add(btnValidar);
-            Controls.Add(txtEmail);
+            Controls.Add(txtDni);
             Controls.Add(label1);
-            Name = "Form06ValidarMail";
-            Text = "Form06ValidarMail";
+            Name = "Form10Dni";
+            Text = "Form10Dni";
             ResumeLayout(false);
             PerformLayout();
         }
@@ -86,8 +87,8 @@
         #endregion
 
         private Label label1;
-        private TextBox txtEmail;
+        private TextBox txtDni;
         private Button btnValidar;
-        private Label lblResultado;
+        private Label label2;
     }
 }

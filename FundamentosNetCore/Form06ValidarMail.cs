@@ -17,49 +17,87 @@ namespace FundamentosNetCore
             InitializeComponent();
         }
 
-        private void btnValidar_Click(object sender, EventArgs e)
-        {
-            string email = txtEmail.Text.Trim();
-            lblResultado.Text = ""; // Limpiar el resultado previo
+        //private void btnValidar_Click(object sender, EventArgs e)
+        //{
+        //    string email = txtEmail.Text.Trim();
+        //    lblResultado.Text = ""; // Limpiar el resultado previo
 
-            // Validar que exista al menos un '@'
-            if (!email.Contains("@"))
+        //    // Validar que exista al menos un '@'
+        //    if (!email.Contains("@"))
+        //    {
+        //        lblResultado.Text = "El email debe contener un '@'.";
+        //    }
+        //    // Validar que '@' no esté al inicio ni al final
+        //    else if (email.IndexOf("@") == 0 || email.LastIndexOf("@") == email.Length - 1)
+        //    {
+        //        lblResultado.Text = "El '@' no puede estar al inicio ni al final.";
+        //    }
+        //    // Validar que no exista más de un '@'
+        //    else if (email.IndexOf("@") != email.LastIndexOf("@"))
+        //    {
+        //        lblResultado.Text = "El email no puede contener más de un '@'.";
+        //    }
+        //    // Validar que exista un punto
+        //    else if (!email.Contains("."))
+        //    {
+        //        lblResultado.Text = "El email debe contener al menos un punto.";
+        //    }
+        //    // Validar que exista un punto después del '@'
+        //    else if (email.IndexOf(".", email.IndexOf("@")) == -1)
+        //    {
+        //        lblResultado.Text = "Debe haber un punto después del '@'.";
+        //    }
+        //    // Validar el dominio (después del último punto)
+        //    else
+        //    {
+        //        string dominio = email.Substring(email.LastIndexOf(".") + 1);
+        //        if (dominio.Length < 2 || dominio.Length > 4)
+        //        {
+        //            lblResultado.Text = "El dominio debe tener entre 2 y 4 caracteres.";
+        //        }
+        //        else
+        //        {
+        //            lblResultado.Text = "El email es válido.";
+        //        }
+        //    }
+        //}
+        private void btnValidarMail_Click(object sender, EventArgs e)
+        {
+            string email = this.txtEmail.Text;
+            if (email.Contains("@") == false)
             {
-                lblResultado.Text = "El email debe contener un '@'.";
+                this.lblResultado.Text = "No existe @";
             }
-            // Validar que '@' no esté al inicio ni al final
-            else if (email.IndexOf("@") == 0 || email.LastIndexOf("@") == email.Length - 1)
+            else if (email.IndexOf("@") == 0 || email.EndsWith("@") == true)
             {
-                lblResultado.Text = "El '@' no puede estar al inicio ni al final.";
+                this.lblResultado.Text = "@ al inicio o al final";
             }
-            // Validar que no exista más de un '@'
             else if (email.IndexOf("@") != email.LastIndexOf("@"))
             {
-                lblResultado.Text = "El email no puede contener más de un '@'.";
+                this.lblResultado.Text = "Más de una @ en el mail";
             }
-            // Validar que exista un punto
-            else if (!email.Contains("."))
+            else if (email.IndexOf(".") == -1)
             {
-                lblResultado.Text = "El email debe contener al menos un punto.";
+                this.lblResultado.Text = "no existe punto en el mail";
             }
-            // Validar que exista un punto después del '@'
-            else if (email.IndexOf(".", email.IndexOf("@")) == -1)
+            else if (email.LastIndexOf(".") < email.IndexOf("@"))
             {
-                lblResultado.Text = "Debe haber un punto después del '@'.";
+                this.lblResultado.Text = "Necesitamos un punto después de @";
             }
-            // Validar el dominio (después del último punto)
             else
             {
-                string dominio = email.Substring(email.LastIndexOf(".") + 1);
-                if (dominio.Length < 2 || dominio.Length > 4)
+                int ultimoPunto = email.LastIndexOf(".");
+                string dominio = email.Substring(ultimoPunto + 1);
+                if (dominio.Length >= 2 && dominio.Length <= 4)
                 {
-                    lblResultado.Text = "El dominio debe tener entre 2 y 4 caracteres.";
+                    this.lblResultado.Text = "Email correcto";
                 }
                 else
                 {
-                    lblResultado.Text = "El email es válido.";
+                    this.lblResultado.Text = "Dominio de 2 a 4 caracteres";
                 }
             }
         }
+
     }
 }
