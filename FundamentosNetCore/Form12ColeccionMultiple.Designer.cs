@@ -37,6 +37,7 @@
             label2 = new Label();
             lstElementos = new ListBox();
             label1 = new Label();
+            btnSleccionados = new Button();
             SuspendLayout();
             // 
             // lblIndexSeleccionado
@@ -44,18 +45,18 @@
             lblIndexSeleccionado.AutoSize = true;
             lblIndexSeleccionado.Location = new Point(106, 400);
             lblIndexSeleccionado.Name = "lblIndexSeleccionado";
-            lblIndexSeleccionado.Size = new Size(134, 19);
+            lblIndexSeleccionado.Size = new Size(140, 19);
             lblIndexSeleccionado.TabIndex = 17;
-            lblIndexSeleccionado.Text = "lblIndexSeleccionado";
+            lblIndexSeleccionado.Text = "lblIndexSeleccionados";
             // 
             // lblItemSeleccionado
             // 
             lblItemSeleccionado.AutoSize = true;
             lblItemSeleccionado.Location = new Point(106, 365);
             lblItemSeleccionado.Name = "lblItemSeleccionado";
-            lblItemSeleccionado.Size = new Size(129, 19);
+            lblItemSeleccionado.Size = new Size(135, 19);
             lblItemSeleccionado.TabIndex = 16;
-            lblItemSeleccionado.Text = "lblItemSeleccionado";
+            lblItemSeleccionado.Text = "lblItemSeleccionados";
             // 
             // btnBorrarTodo
             // 
@@ -65,6 +66,7 @@
             btnBorrarTodo.TabIndex = 15;
             btnBorrarTodo.Text = "Borrar Todo";
             btnBorrarTodo.UseVisualStyleBackColor = true;
+            btnBorrarTodo.Click += btnBorrarTodo_Click;
             // 
             // btnEliminar
             // 
@@ -75,6 +77,7 @@
             btnEliminar.TabIndex = 14;
             btnEliminar.Text = "Eliminar";
             btnEliminar.UseVisualStyleBackColor = false;
+            btnEliminar.Click += btnEliminar_Click;
             // 
             // btnInsertar
             // 
@@ -84,6 +87,7 @@
             btnInsertar.TabIndex = 13;
             btnInsertar.Text = "Insertar";
             btnInsertar.UseVisualStyleBackColor = true;
+            btnInsertar.Click += btnInsertar_Click;
             // 
             // txtNuevoElemento
             // 
@@ -118,11 +122,22 @@
             label1.TabIndex = 9;
             label1.Text = "Elementos";
             // 
+            // btnSleccionados
+            // 
+            btnSleccionados.Location = new Point(490, 247);
+            btnSleccionados.Name = "btnSleccionados";
+            btnSleccionados.Size = new Size(133, 46);
+            btnSleccionados.TabIndex = 18;
+            btnSleccionados.Text = "Seleccionados";
+            btnSleccionados.UseVisualStyleBackColor = true;
+            btnSleccionados.Click += btnSleccionados_Click;
+            // 
             // Form12ColeccionMultiple
             // 
             AutoScaleDimensions = new SizeF(7F, 17F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(822, 493);
+            Controls.Add(btnSleccionados);
             Controls.Add(lblIndexSeleccionado);
             Controls.Add(lblItemSeleccionado);
             Controls.Add(btnBorrarTodo);
@@ -150,5 +165,6 @@
         private Label label2;
         private ListBox lstElementos;
         private Label label1;
+        private Button btnSleccionados;
     }
 }
