@@ -6,10 +6,8 @@ using System.Threading.Tasks;
 
 namespace ProyectoClases.Models
 {
-    public class Mascota
+    public class ColeccionMascotas: List<Mascota>
     {
-        public string Nombre { get; set; }
-        public string Raza { get; set; }
-        public int Years { get; set; }
+
     }
 }
